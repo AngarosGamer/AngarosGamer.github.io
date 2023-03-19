@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<!-- If you're seeing this, you're definitely a Russian spy stealing intelligence -->
+
+<html lang="en">
+<head>
+      <link rel="stylesheet" href="../design/css/general.css" />
+      <link rel="stylesheet" href="../design/css/nav.css" />
+      <link rel="stylesheet" href="../design/css/overclocking.css" />
+    <title>Angaros - Overclock NVIDIA</title>
+    </head>
+    <body>
+    <nav>
+      <ul>
+        <li><a href="../mainPage.php" data-value="Home" id="nav-header-1">Home</a></li>
+        <li><a href="OverclockingGuide.php" data-value="Overclocking Guide" id="nav-header-2">Overclocking Guide</a></li>
+      </ul>
+        <div class="fade_rule"></div>
+      </nav>
+      <div class="author">
+            <h1>Overclocking Guide NVIDIA</h1>
+            <p>
+                Made by Plerion#6666 heavily based on Happy Pill#9683's guide - Last update 
+				15/09/2022 @17:59 UTC+1
+            </p>
+        </div>
+        <div id="maintext">
+
+                <h3>Advantages</h3>
+
+                        <p>Overclocking allows you to:</p>
+                        <ul>
+                            <li>Get more earnings</li>
+                            <li>Lower power usage</li>
+                            <li>Increase the life of your GPU</li>
+                        </ul>
+
+                <h3>Warnings</h3>
+                <p>The following content is not official, and is not being monitored by Salad. The use of the following is solely at your own risk, and <b>we will not be held liable for any damage</b>, loss of information, or any issue whatsoever.
+                <br><br>
+                We cannot and will not pay you back in any event.</p>
+                <p>
+                    <i>Wondering why this is here? It's because I'm a sole user outside of Salad that made this. Like in a children's playground, where they say you have to use it at your own risk, it isn't because it is made to hurt kids, but rather because we can't afford to be held liable for damage.</i>
+                </p>
+
+
+                <h3>Prerequisites</h3>
+                <ul>
+                    <li>Internet Connection</li>
+                    <li>A GPU with 3GB+ VRAM</li>
+                    <li>500MB disk space</li>
+                    <li>Have installed MSI Afterburner, found <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank">Here</a>.</li>
+                </ul>
+
+                <h3>Step 1: Increasing Hashrate</h3>
+                <p>For the most effective results, ensure that you follow this guide in order!</p>
+                <p>When tuning a GPU for mining on Etchash, the first step is to start pushing the memory to its absolutely limit before it crashes or becomes unstable.
+                <br>Basically, just start moving the memory clock slider in MSI afterburner up by around 50MHz at a time until you error out, shows some artifacts, or your display driver dies. A simple restart will fix the latter, and the former can be remedied by backing off the overclock a little). Make sure to be doing all of this WHILE mining!
+                <br>Sometimes you may get worse hashrate without any noticeable errors, so watch out for that and back off the overclock a little if it does happen.</p>
+                
+                <p>When tuning a GPU for most other algorithms (Like KawPow), you want to follow a similar process but apply it to the core as well, just in smaller increments of ~30MHz.</p>
+                <p>Most of this guide is also applicable to AMD GPUs; Increase memory clock, reduce power limit a bit, and balance fan speeds to GPU temperatures.</p>
+                <ul>
+                <li><i>MEMORY ONLY</i></li>
+                <li>For some time savings, you can usually use the following as starting points (use the process above, just start from these figures rather than 0) for your applicable cards:</li>
+                <li>For GDDR5 Turing cards (The base 1650 and 1660): +500</li>
+                <li>For GDDR6 Turing cards (All other GTX 16x0 and RTX 20x0 cards): +700-800</li>
+                <li>For Turing Max Q cards: +500 (<a href="https://www.techpowerup.com/gpu-specs/?mobile=Yes&architecture=Turing&sort=generation" target="_blank">These</a>)</li>
+                <li>Ampere (RTX 30) cards: +1000*</li>
+                <li>Lower-end mobile Ampere (~RTX 3050/ti) cards: +600</li>
+                </ul>
+
+                <h3>Step 2: Power</h3>
+                <p>Start lowering the power limit until you start losing hashrate. You want it to be as low as possible without sacrificing performance.</p>
+                <p>You can usually lower your power limit to somewhere around 75% without noticeably losing much hashrate - but if you go lower than this, be aware that there's the potential that it can drop off significantly.</p>
+                <p>It's a bit of a balancing game - For example, would you lower your hashrate by 0.2mh/s, but save 10w? In this case, most people probably would. But if you only care about earning money, and don't have to worry about electricity usage / heat output, you may very well want that extra bit of hashrate. It's your choice.</p>
+
+                <h3>Step 3: Cooling</h3>
+                <p>Now that your overclock settings are all dialed in, you next need to keep an eye on your GPU's temperatures. Each GPU model has its own unique maximum thermal limit, but generally you don't want it to exceed 80&#176;c.
+                <br>You may need to increase your fan speed to keep it in the safe zone, ideally around 65 - 75&#176;c.</p>
+                <p>If your GPU is managing to stay even cooler than this, you could choose to reduce your fan speeds a little, to reduce the likely noise that they're producing.</p>
+                <p>Once you've found a nice balance between GPU temperature and fan noise, you should be all good to go!</p>
+
+                <h3>Notes</h3>
+                <ul>
+                    <li>To make everything easier and safer, save these settings to a profile but <b>do NOT enable apply on Windows startup</b>. Doing so with an unstable oc could cause an infinite crash loop when you boot up, which can only be escaped by holding the Ctrl key right after login.</li>
+                    <li>If you plan to game, press the reset button on Afterburner to reset your overclock - or select your gaming overclock profile, if you have one, to prevent accidental crashes.</li>
+                    <li>If your fan speeds are above ~80% and your GPU temperatures are still somewhere above 75&#176;c, there's likely an issue, or you haven't followed the guide in the correct order.</li>
+                </ul>
+
+
+                <br>
+                <h3>Additional nerdy info below</h3>
+                <p>- *Note that GDDR6X GPUs (3070ti through to 3090ti - <a href="https://www.techpowerup.com/gpu-specs/?architecture=Ampere&memtype=GDDR6X&sort=generation" target="_blank">These</a>) can generally clock substantially higher than this. However, GDDR6X is very prone to performance degradation rather than errors or showing artifacts. As such, it is particularly important to monitor hashrate while testing settings on these cards.
+                <br>Also of interest is that these memory chips seem to scale with temperatures, to a degree. This means that cooling your memory chips better may lead to improved clocks / stability, and consequently a higher hashrate.
+                <br>Replacing your VRAM's thermal pads (re-padding) may be worth considering in some cases if you are comfortable with it. If not, just ensure that your GPU has very adequate cooling.</p>
+            </div>
+        </div>
+      </div>
+    </body>
+    <script src="../design/js/letterAlternate.js"></script>
+</html>

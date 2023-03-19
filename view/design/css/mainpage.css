@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Rubik Mono';
+    src: url('../fonts/RubikMono/rubikmonoone-regular-webfont.woff2') format('woff2'),
+    url('../fonts/RubikMono/rubikmonoone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-y: hidden;
+}
+
+
+div {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Rubik Mono', serif;
+}
